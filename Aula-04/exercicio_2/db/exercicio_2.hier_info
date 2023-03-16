@@ -1,0 +1,14 @@
+|exercicio_2
+A[0] => ~NO_FANOUT~
+A[1] => ~NO_FANOUT~
+A[2] => ~NO_FANOUT~
+A[3] => ~NO_FANOUT~
+B[0] <= <VCC>
+B[1] <= <GND>
+B[2] <= <GND>
+B[3] <= <VCC>
+C[0] <= <GND>
+C[1] <= <GND>
+C[2] <= <VCC>
+
+

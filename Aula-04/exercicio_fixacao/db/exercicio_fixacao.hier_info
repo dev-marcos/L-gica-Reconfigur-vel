@@ -1,0 +1,6 @@
+|tri_state
+input => output.DATAIN
+ena => output.OE
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+

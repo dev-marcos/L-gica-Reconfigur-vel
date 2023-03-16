@@ -1,0 +1,12 @@
+vendor_name = ModelSim
+source_file = 1, /home/marcos/Documentos/Logica-Reconfiguravel/Aula-04/exercicio_fixacao/exercicio_fixacao.vhd
+source_file = 1, /home/marcos/Documentos/Logica-Reconfiguravel/Aula-04/exercicio_fixacao/tri_state.vhd
+source_file = 1, /home/marcos/intelFPGA/18.0/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, /home/marcos/intelFPGA/18.0/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, /home/marcos/intelFPGA/18.0/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, /home/marcos/intelFPGA/18.0/quartus/libraries/vhdl/ieee/timing_p.vhd
+source_file = 1, /home/marcos/Documentos/Logica-Reconfiguravel/Aula-04/exercicio_fixacao/db/exercicio_fixacao.cbx.xml
+design_name = tri_state
+instance = comp, \output~output\, output~output, tri_state, 1
+instance = comp, \input~input\, input~input, tri_state, 1
+instance = comp, \ena~input\, ena~input, tri_state, 1
