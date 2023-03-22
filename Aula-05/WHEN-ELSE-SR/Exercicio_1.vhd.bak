@@ -1,0 +1,17 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+ENTITY exercicio_fixacao IS
+	PORT (saida1: OUT std_logic_vector(1 to 8);
+	      saida2: OUT std_logic_vector(0 to 3);
+	      saida3: OUT std_logic_vector(3 downto 0));
+END exercicio_fixacao;
+
+ARCHITECTURE logica OF exercicio_fixacao IS
+	CONSTANT x1: std_logic_vector(1 to 8) := "00110000";
+	CONSTANT x2: std_logic_vector(0 to 3) := "1101";
+	CONSTANT x3: std_logic_vector(3 downto 0) := "1101"; 
+BEGIN
+	saida1<= x1;
+	saida2<= x2;
+	saida3<= x3;
+END logica;
