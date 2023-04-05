@@ -1,0 +1,28 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY Exercicio_2 IS
+PORT (ENTRADA: IN  std_logic_Vector (0 to 4);
+		  SAIDA: OUT std_logic_Vector (0 to 4));
+END ENTITY;
+
+ARCHITECTURE funcao Of Exercicio_3 IS
+BEGIN
+
+	
+	GEN: FOR i IN ENTRADA'RANGE GENERATE
+
+		
+		if1 : IF i = (ENTRADA'LENGTH -1)  GENERATE
+			SAIDA(i) <= '0';
+		END GENERATE if1;
+		
+		
+		if2 : IF i /= (ENTRADA'LENGTH -1) GENERATE
+			SAIDA(i) <= ENTRADA(i);
+		END GENERATE if2;
+		
+	END GENERATE GEN;
+	
+	
+END funcao;
