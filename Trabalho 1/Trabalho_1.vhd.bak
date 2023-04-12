@@ -1,0 +1,17 @@
+-- Nome Projeto: Trabalho 1
+-- Data: 30/03/2023
+-- Nome: Marcos Vinicius Rocha da Silva/2159678
+
+
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+ENTITY Trabalho_1 IS
+PORT (SW : IN std_logic_vector(1 downto 0);
+	 LEDR : OUT std_logic_vector(0 downto 0));
+END Trabalho_1;
+ARCHITECTURE logica OF Trabalho_1
+IS
+BEGIN
+	LEDR(0) <= SW(1) AND SW(0);
+END logica;
