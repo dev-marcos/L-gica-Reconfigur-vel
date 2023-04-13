@@ -1,0 +1,18 @@
+-- Nome Projeto: Trabalho 2
+-- Data: 13/04/23
+-- Nome: Marcos Vinicius Rocha da Silva / 2159678
+
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+ENTITY Trabalho_2 IS
+PORT (
+		SW : IN std_logic_vector(5 downto 0); --Input de SW
+	 HEX0 : OUT std_logic_vector(0 to 6)); --Saida para Display 7 Segmentos
+END Trabalho_2;
+ARCHITECTURE logica OF Trabalho_2 IS
+SIGNAL bin, gray : std_logic_vector(0 to 6); --Armazena conversao de binario e gray
+BEGIN
+	
+
+END logica;
