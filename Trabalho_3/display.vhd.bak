@@ -1,0 +1,38 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity display is
+  port (
+    value : in std_logic_vector(6 downto 0);
+    segments : out std_logic_vector(6 downto 0)
+  );
+end entity;
+
+architecture Behavioral of display is
+  
+  -- Tabela de conversão de valores para segmentos do display de 7 segmentos
+  constant SEGMENT_TABLE : std_logic_vector(9 downto 0) :=
+    "0000000001",  -- 0
+    "1001111111",  -- 1
+    "0010010010",  -- 2
+    "0000110010",  -- 3
+    "1001100000",  -- 4
+    "0100100000",  -- 5
+    "0100000000",  -- 6
+    "0001111110",  -- 7
+    "0000000000",  -- 8 (off)
+    "0001100000";  -- 9
+  
+begin
+  
+  process(value)
+  begin
+    -- Conversão do valor para segmentos do display
+    if value < 10 then
+      segments <= SEGMENT_TABLE(to_integer(unsigned(value)));
+    else
+      segments <= SEGMENT_TABLE(9);
+    end if;
+  end process;
+
+end Behavioral;
