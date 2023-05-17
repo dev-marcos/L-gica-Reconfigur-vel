@@ -1,0 +1,240 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/18.1
+Edec2para4
+Z0 w1684349854
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 dC:/Users/aluno/Documents/Marcos/Aula-17/ModelSim
+Z4 8C:\Users\aluno\Documents\Marcos\Aula-17\ModelSim\dec2para4.vhd
+Z5 FC:\Users\aluno\Documents\Marcos\Aula-17\ModelSim\dec2para4.vhd
+l0
+L3
+VZR6KLf=8D1<0WFGAgg^f;3
+!s100 J7fYz0@PQKN7:nTGiNi_O0
+Z6 OV;C;10.5b;63
+32
+Z7 !s110 1684350216
+!i10b 1
+Z8 !s108 1684350216.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\aluno\Documents\Marcos\Aula-17\ModelSim\dec2para4.vhd|
+Z10 !s107 C:\Users\aluno\Documents\Marcos\Aula-17\ModelSim\dec2para4.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Afuncao
+R1
+R2
+DEx4 work 9 dec2para4 0 22 ZR6KLf=8D1<0WFGAgg^f;3
+l9
+L8
+VQ:QW0dGVN0:UZiUEzS5Ea0
+!s100 YnWz4Qz3QnWDR54>oic2Z1
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Egerador_sim
+Z13 w1684348606
+R1
+R2
+R3
+Z14 8C:\Users\aluno\Documents\Marcos\Aula-17\ModelSim\gerador_sim.vhd
+Z15 FC:\Users\aluno\Documents\Marcos\Aula-17\ModelSim\gerador_sim.vhd
+l0
+L4
+VEjgc@Q@LNlR:zcKELW`1I3
+!s100 ]T;?Ya^cZai7z?@I<<K370
+R6
+32
+Z16 !s110 1684349596
+!i10b 1
+Z17 !s108 1684349596.000000
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\aluno\Documents\Marcos\Aula-17\ModelSim\gerador_sim.vhd|
+Z19 !s107 C:\Users\aluno\Documents\Marcos\Aula-17\ModelSim\gerador_sim.vhd|
+!i113 1
+R11
+R12
+Alogica
+R1
+R2
+DEx4 work 11 gerador_sim 0 22 Ejgc@Q@LNlR:zcKELW`1I3
+l9
+L8
+VKck:HBHF4J:bMVImJ3H9Y3
+!s100 e0cHYBbBGG?`ZN=Z[finM1
+R6
+32
+R16
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R11
+R12
+Eporta_and
+Z20 w1684347877
+R1
+R2
+R3
+Z21 8C:\Users\aluno\Documents\Marcos\Aula-17\ModelSim\porta_and.vhd
+Z22 FC:\Users\aluno\Documents\Marcos\Aula-17\ModelSim\porta_and.vhd
+l0
+L3
+V@h?<@CkG3?dOVPPJH5gGV1
+!s100 Eb8P;bBC3B68n:[1KU1az0
+R6
+32
+Z23 !s110 1684347907
+!i10b 1
+Z24 !s108 1684347906.000000
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\aluno\Documents\Marcos\Aula-17\ModelSim\porta_and.vhd|
+Z26 !s107 C:\Users\aluno\Documents\Marcos\Aula-17\ModelSim\porta_and.vhd|
+!i113 1
+R11
+R12
+Alogica
+R1
+R2
+DEx4 work 9 porta_and 0 22 @h?<@CkG3?dOVPPJH5gGV1
+l10
+L9
+Vk=KzzLkhed8:c9YO<L>B83
+!s100 ;E:4TdAWUoBfF9Z6c6lZD3
+R6
+32
+R23
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R11
+R12
+Etestbench1
+Z27 w1684348035
+R3
+Z28 8C:\Users\aluno\Documents\Marcos\Aula-17\ModelSim\tb_porta_and.vhd
+Z29 FC:\Users\aluno\Documents\Marcos\Aula-17\ModelSim\tb_porta_and.vhd
+l0
+L1
+VNCL<lh=1=_Ahz[3AJnGkW1
+!s100 M>KQA=KoZ_U^]^Z18Tga32
+R6
+32
+Z30 !s110 1684348041
+!i10b 1
+Z31 !s108 1684348041.000000
+Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\aluno\Documents\Marcos\Aula-17\ModelSim\tb_porta_and.vhd|
+Z33 !s107 C:\Users\aluno\Documents\Marcos\Aula-17\ModelSim\tb_porta_and.vhd|
+!i113 1
+R11
+R12
+Atb_porta_and
+DEx4 work 10 testbench1 0 22 NCL<lh=1=_Ahz[3AJnGkW1
+R1
+R2
+l12
+L4
+V7_VRjPjnR<MRYj?dhz<iN0
+!s100 R7>=VzNifUD7oSc`hm3i70
+R6
+32
+R30
+!i10b 1
+R31
+R32
+R33
+!i113 1
+R11
+R12
+Etestbench2
+Z34 w1684349316
+R1
+R2
+R3
+Z35 8C:\Users\aluno\Documents\Marcos\Aula-17\ModelSim\tb_gerador_sim.vhd
+Z36 FC:\Users\aluno\Documents\Marcos\Aula-17\ModelSim\tb_gerador_sim.vhd
+l0
+L4
+VRJ4O7;XRKXFZ0alL;MnFP2
+!s100 [aQEkYO]PkHSPc45719mS1
+R6
+32
+R16
+!i10b 1
+R17
+Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\aluno\Documents\Marcos\Aula-17\ModelSim\tb_gerador_sim.vhd|
+Z38 !s107 C:\Users\aluno\Documents\Marcos\Aula-17\ModelSim\tb_gerador_sim.vhd|
+!i113 1
+R11
+R12
+Atb_gerador_sim
+R1
+R2
+DEx4 work 10 testbench2 0 22 RJ4O7;XRKXFZ0alL;MnFP2
+l13
+L6
+VDoM2^Mf_m4GHN1D?3`:]b3
+!s100 dZ8j2`_OboO_>8<5b=MKG2
+R6
+32
+R16
+!i10b 1
+R17
+R37
+R38
+!i113 1
+R11
+R12
+Etestbench3
+Z39 w1684350208
+R3
+Z40 8C:\Users\aluno\Documents\Marcos\Aula-17\ModelSim\tb_dec2para4.vhd
+Z41 FC:\Users\aluno\Documents\Marcos\Aula-17\ModelSim\tb_dec2para4.vhd
+l0
+L1
+VIB`@ZFWDe6eKj5f<nzW??0
+!s100 HHQ<V:gJH1]Wdo2bNRADe2
+R6
+32
+R7
+!i10b 1
+R8
+Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\aluno\Documents\Marcos\Aula-17\ModelSim\tb_dec2para4.vhd|
+Z43 !s107 C:\Users\aluno\Documents\Marcos\Aula-17\ModelSim\tb_dec2para4.vhd|
+!i113 1
+R11
+R12
+Atb_dec2para4
+Z44 DEx4 work 10 testbench3 0 22 IB`@ZFWDe6eKj5f<nzW??0
+R1
+R2
+l12
+L4
+Z45 VJRG^nfZ6X5iO;z@BV`5e73
+Z46 !s100 1FY@L?@;chLSeMIW4fAFf3
+R6
+32
+R7
+!i10b 1
+R8
+R42
+R43
+!i113 1
+R11
+R12
