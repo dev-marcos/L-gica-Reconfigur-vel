@@ -1,0 +1,19 @@
+--Faça uma máquina de estados MOORE que controle a movimentação
+--de um motor de passos (passo completo 1) com controle do sentido de
+--rotação. Use clock 50MHz para clk (0,5 Hz), e DIP [0] para a direção.
+--Como saída use LED [0-3]. Faça pelo modelo 2.
+
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+-------------------------------------------------------------------
+entity Exercicio_3 is
+port( clk, dir, reset: in std_logic;
+		
+      saida: out std_logic_vector(1 downto 0));
+end Exercicio_3;
+-------------------------------------------------------------------
+architecture Maq_est_Moore of Exercicio_3 is
+
+type MEUS_ESTADOS is (A, B, C, D);
+signal estado: MEUS_ESTADOS;
