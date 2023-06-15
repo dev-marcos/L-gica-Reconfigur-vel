@@ -1,0 +1,39 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+entity rs232_maq is
+port( CLOCK_50 : IN std_logic; --CLICK_50
+	         SW : in std_logic_vector(3 downto 0); --rot(2), vel(1), passo(0)
+	      GPIO_1: OUT std_logic_vector(0 TO 3); --MOTOR
+	        LEDR: OUT std_logic_vector(0 TO 3));
+end rs232_maq;
+-------------------------------------------------------------------
+architecture funcionamento of rs232_maq is
+type estados_type is (S0, S1, S2, S3);
+signal estado: estados_type := S0;
+signal seg: integer range 0 to 50000000 := 0;
+signal contagem: integer range 0 to 50000000 := 0;
+signal cont_passo: integer range 0 to 50000000;
+
+begin
+--PROCESSO DE CONTROLE DE VELOCIDADE
+ velocidade : process (SW(1))
+ begin
+	if SW(1) = '0' then
+		contagem <= 50000000; --1Hz
+	else contagem <= 500000; --100Hz para o motor de passo
+	end if;
+ end process;
+ 
+ --PROCESSO DE CONTROLE DE PASSO
+ passo_ctrl : process (SW(0)) 
+ begin
+	if SW(0) = '0' then
+		cont_passo<=contagem;
+	else cont_passo<=contagem/2;
+	end if;
+ end process;
+ 
+ 
+
+end funcionamento;
