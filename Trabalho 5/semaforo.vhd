@@ -30,115 +30,96 @@ architecture funcionamento of semaforo is
 
 
 type state_type is (Q0, Q1, Q2, Q3, Q4, Q5, Q6);
-signal estado : state_type := Q5;
+signal estado : state_type := Q0;
 
 signal countdown : integer range -1 to 9 := -1;
 signal acende : BOOLEAN ;
  
 	 
-	 
 signal seg: integer range 0 to 50000000 := 0;
-signal aguarda : integer range 0 to 10 := 0; 
+
 begin
+
 --PROCESSO DE CONTROLE DE ESTADO
- processo_estados : process(CLOCK_50)
- begin
+
+processo_estados : process(CLOCK_50)
+ 
+
+variable aguarda : integer range 0 to 10 := 0; 
+variable segundo : integer range 0 to 60 := 0;  
+begin
+
+
 	if rising_edge(CLOCK_50) then
+		if SW(0) = '1' then
+			estado <= Q6;
+			aguarda := 0;
+			countdown <= -1;
+		end if;
+	
 		if seg = 50000000 then
-		-------MAQUINA DE ESTADOS--------------
+			
+			if  segundo >= aguarda then
+				segundo := 0;
+				
+				case estado is
+					when Q0 => 
+						aguarda := 2;
+						estado <= Q1;
+
+					when Q1 =>  
+						aguarda := 1;
+						estado <= Q2;
+
+					when Q2 =>  
+						aguarda := 8;
+						estado <= Q3;
+
+					when Q3 =>  
+						aguarda := 2;
+						estado <= Q4;
+
+					when Q4 =>  
+						aguarda := 1;
+						estado <= Q5;
+
+					when Q5 =>  
+						aguarda := 8;
+						countdown <= 9;
+						estado <= Q0;
+
+					when Q6 =>
+					if SW(0) = '0' then
+							aguarda := 8;
+							countdown <= 9;
+							estado <= Q0;	
+					else
+
+						acende <= not acende;
+						estado <= Q6;
+						
+					end if;
+				end case;
+			end if;
+			
+		
+			seg <= 0;
+			
+			segundo := segundo + 1;
+			
 			if countdown >= 0 then
 				countdown <= countdown -1;
 			end if;
-		
-			if aguarda>0  AND SW(0) = '0' then
-				aguarda <= aguarda -1;
-			else
-				case estado is
-					when Q0 => 
-						if SW(0) = '0' then
-							
-							aguarda <= 2;
-							estado <= Q1;
-						else
-							estado <= Q6;
-
-						end if;
-							
-					when Q1 =>  
-						if SW(0) = '0' then
-							
-						
-						aguarda <= 1;
-						estado <= Q2;
-						else
-							estado <= Q6;
-
-						end if;
-						
-					when Q2 =>  
-						if SW(0) = '0' then
-							
-						
-						aguarda <= 8;
-						estado <= Q3;
-						else
-							estado <= Q6;
-
-						end if;	
-						
-					when Q3 =>  
-						if SW(0) = '0' then
-							
-							aguarda <= 2;
-							estado <= Q4;
-						else
-							estado <= Q6;
-
-						end if;
-					when Q4 =>  
-						if SW(0) = '0' then
-							
-							aguarda <= 1;
-							estado <= Q5;
-						else
-							estado <= Q6;
-
-						end if; 
-					when Q5 =>  
-						if SW(0) = '0' then
-							
-							aguarda <= 8;
-							countdown <= 9;
-							estado <= Q0;
-						else
-							estado <= Q6;
-							
-						end if;
-
-					when Q6 =>
-						if SW(0) = '0' then
-							estado <= Q5;
-							aguarda <= 0;
-						else
-					
-							acende <= not acende;
-							estado <= Q6;
-						end if;
-							-- do nothing
-				end case;
-			end if;
-
-			---------------------------------------
 			
-		
-
-			seg <= 0;
 		else
 			seg <= seg+1;
 			
 		end if;
-		
+
 	end if;
+
+
+		-------MAQUINA DE ESTADOS-------------
 end process;
 
 
